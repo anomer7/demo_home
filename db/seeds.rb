@@ -7,7 +7,5 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 puts 'SETTING UP DEFAULT USER LOGIN'
-user = User.create! :name => 'Ankur Omer', :email => 'ankuromer007@gmail.com', :password => '123456', :password_confirmation => '123456', :confirmed_at => DateTime.now
+user = User.create! :name => 'The Ank', :email => 'theank007@gmail.com', :password => '123456', :password_confirmation => '123456', :confirmed_at => DateTime.now
 puts 'New user created: ' << user.name
-user2 = User.create! :name => 'The Ank', :email => 'theank007@gmail.com', :password => '123456', :password_confirmation => '123456', :confirmed_at => DateTime.now
-puts 'New user created: ' << user2.name
