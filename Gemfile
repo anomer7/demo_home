@@ -48,3 +48,5 @@ gem "factory_girl_rails", ">= 4.0.0", :group => [:development, :test]
 gem "devise", ">= 2.1.2"
 gem "simple_form", ">= 2.0.2"
 gem "therubyracer", ">= 0.10.2", :group => :assets, :platform => :ruby
+
+gem 'paperclip'

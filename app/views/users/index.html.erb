@@ -1,7 +1,25 @@
-<ul class="users">
-  <% @users.each do |user| %>
-    <li>
-      <%= link_to user.name, user %> signed up <%= user.created_at.to_date %>
-    </li>
-  <% end %>
-</ul>
+<h1>Listing users</h1>
+
+<table>
+  <tr>
+  	<th>Photo</th>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Signed up on</th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @users.each do |user| %>
+  <tr>
+  	<td><%= image_tag user.avatar.url(:thumb) %></td>
+    <td><%= user.name %></td>
+    <td><%= user.email %></td>
+    <td><%= user.created_at.to_date %></td>
+    <td><%= link_to 'Show', user %></td>
+    <% if user.email == current_user.email %>
+      <td><%= link_to 'Edit', edit_user_registration_path(user) %></td>
+    <% end %>
+  </tr>
+<% end %>
+</table>

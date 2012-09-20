@@ -6,10 +6,12 @@ Demo::Application.routes.draw do
 
   root :to => "home#index"
 
-  devise_for :users
+  devise_for :users, :controllers => { :registrations => :registrations }
 
   resources :users, only: [:show, :index]
 
+  match '/users/:id/avatars' => 'users#avatars', :as => 'avatars_user'
+    
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
